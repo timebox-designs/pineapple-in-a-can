@@ -32,6 +32,5 @@
     "main": "index.js",
     "directories": {
         "test": "test"
-    },
-    "sourceMaps":false
+    }
 }

@@ -37,5 +37,6 @@ exports.config = {
     server: {
         port: 8080,
         run: true
-    }
+    },
+    "sourceMaps":false
 };
