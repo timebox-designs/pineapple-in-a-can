@@ -1,2 +1,119 @@
+// nib is a powerful lib for stylus that provides cross-browser css3 mixins.
+// No more vendor prefixes. http://visionmedia.github.com/nib/
+@import 'nib'
+
 body
-  padding-top: 80px
+  padding-top: 60px
+  background: url("../img/stripped-bg.png")
+
+header
+  font-family: Slackey
+
+  .navbar.navbar-fixed-top
+    position: fixed
+
+  .navbar
+    .navbar-inner
+      background: #90425c
+      padding: 15px 20px
+
+    .brand
+      color: #fff
+      font-size: 22px
+      text-transform: uppercase
+      text-shadow: 2px 2px #5f6359
+
+    .nav > li > a
+      color: #fff
+      font-size: 12px
+
+    .brand:hover,
+    .nav > li > a:hover
+      color: #F4F0C3
+
+.masthead
+  background: #3a859f url("../img/noise.png") top left repeat
+  padding-top: 40px
+  text-align: center
+
+  h1
+    font-family: Slackey
+    font-size: 54px
+    color: #fff
+    padding-bottom: 20px
+    text-shadow: 2px 2px #5f6359
+
+    strong
+      color: #F4F0C3
+
+  h2
+    color: #245060
+    font-weight: 100
+    font-size: 28px
+    padding-top: 20px
+    border-top: 2px solid #42a0ba
+    box-shadow: 0 -2px #276475
+    width: 60%
+    margin: 10px auto
+
+  .windows
+    position: relative
+    z-index: 1
+    margin-top: 20px
+    height: 320px
+    overflow: hidden
+
+    .image-left
+      position: absolute
+      width: 30%
+      left: 5%
+      bottom: -8%
+
+    .image-center
+      position: absolute
+      width: 40%
+      left: 50%
+      bottom: -9%
+      margin-left: -20%
+
+    .image-right
+      position: absolute
+      width: 30%
+      right: 5%
+      bottom: -6%
+
+.features
+  position: relative
+  z-index: 2
+  padding: 30px 0
+  box-shadow: 0px -10px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 3px #797d71
+
+  .info-bullet
+    color: #fff
+    text-align: center
+    margin-bottom: 10px
+
+    i
+      font-size: 90px
+      display: block
+      line-height: 102px
+      text-shadow: 1px 1px #5f6359
+
+    h5
+      color: #3a859f
+      font-size: 22px
+      text-transform: uppercase
+      text-shadow: 1px 1px #5f6359
+      margin-bottom: 5px
+      padding-bottom: 10px
+      font-family: Slackey
+
+footer
+  color: #B7C4BE
+  padding-top: 30px
+  font-family: Slackey
+  background-color: #93A399
+  height: 200px
+
+  p
+    font-size: 18px

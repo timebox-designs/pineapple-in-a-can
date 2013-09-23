@@ -1,4 +1,5 @@
-var Backbone = require("backbone");
+var Backbone = require("backbone"),
+    $ = require("jquery");
 
 $(function () {
     var ApplicationLayout = require("views/application"),
