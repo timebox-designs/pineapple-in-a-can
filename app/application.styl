@@ -2,12 +2,16 @@
 // No more vendor prefixes. http://visionmedia.github.com/nib/
 @import 'nib'
 
+$font-family = Slackey
+$hover-color = #f4f0c3
+$text-shadow = #5f6359
+
 body
   padding-top: 60px
   background-color: #86988b
 
 header
-  font-family: Slackey
+  font-family: $font-family
 
   .navbar.navbar-fixed-top
     position: fixed
@@ -22,7 +26,7 @@ header
       color: #fff
       font-size: 22px
       text-transform: uppercase
-      text-shadow: 2px 2px #5f6359
+      text-shadow: 2px 2px $text-shadow
 
     .nav > li > a
       color: #fff
@@ -30,7 +34,7 @@ header
 
     .brand:hover,
     .nav > li > a:hover
-      color: #f4f0c3
+      color: $hover-color
 
 .masthead
   background: #3a859f url("../img/noise.png") top left repeat
@@ -38,14 +42,14 @@ header
   text-align: center
 
   h1
-    font-family: Slackey
+    font-family: $font-family
     font-size: 54px
     color: #fff
     padding-bottom: 20px
-    text-shadow: 2px 2px #5f6359
+    text-shadow: 2px 2px $text-shadow
 
     strong
-      color: #f4f0c3
+      color: $hover-color
 
   h2
     color: #245060
@@ -62,7 +66,7 @@ header
       text-decoration: none
 
     a:hover
-      color: #f4f0c3
+      color: $hover-color
 
   .windows
     position: relative
@@ -120,20 +124,20 @@ header
       font-size: 90px
       display: block
       line-height: 102px
-      text-shadow: 1px 1px #5f6359
+      text-shadow: 1px 1px $text-shadow
 
     h5
       color: #3a859f
       font-size: 22px
       text-transform: uppercase
-      text-shadow: 1px 1px #5f6359
+      text-shadow: 1px 1px $text-shadow
       margin-bottom: 5px
       padding-bottom: 10px
-      font-family: Slackey
+      font-family: $font-family
 
 footer
   padding-top: 30px
-  font-family: Slackey
+  font-family: $font-family
   height: 200px
 
   a

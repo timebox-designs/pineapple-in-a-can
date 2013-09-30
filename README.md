@@ -4,6 +4,16 @@
 
 > Pineapple in a Can is a [Brunch](http://brunch.io/) skeleton chock full of yummy goodness!
 
+## Getting started
+    $ brunch new https://github.com/timebox-designs/pineapple-in-a-can.git
+    $ brunch w -s
+
+or
+
+    $ git clone https://github.com/timebox-designs/pineapple-in-a-can.git
+    $ npm install
+    $ brunch w -s
+
 ## Languages
 * [JavaScript](http://www.codecademy.com/tracks/javascript)
 * [Stylus](http://learnboost.github.io/stylus/)
@@ -27,13 +37,5 @@
 * [Clean-CSS-brunch](https://github.com/brunch/clean-css-brunch)
 * [JSHint-brunch](https://github.com/brunch/jshint-brunch)
 
-## Getting started
-    $ brunch new https://github.com/timebox-designs/pineapple-in-a-can.git
-    $ brunch w -s
-
-or
-
-    $ git clone https://github.com/timebox-designs/pineapple-in-a-can.git
-    $ npm install
-    $ brunch w -s
-
+## Extras
+* A pretty little one page application to play around with.
