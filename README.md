@@ -28,12 +28,12 @@
 * [JSHint-brunch](https://github.com/brunch/jshint-brunch)
 
 ## Getting started
-`$ brunch new https://github.com/timebox-designs/pineapple-in-a-can.git
-$ brunch w -s`
+    $ brunch new https://github.com/timebox-designs/pineapple-in-a-can.git
+    $ brunch w -s
 
 or
 
-`$ git clone https://github.com/timebox-designs/pineapple-in-a-can.git
-$ npm install   
-$ brunch w -s`
+    $ git clone https://github.com/timebox-designs/pineapple-in-a-can.git
+    $ npm install
+    $ brunch w -s
 
