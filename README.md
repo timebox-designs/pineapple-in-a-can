@@ -1,4 +1,5 @@
-pineapple-in-a-can
-==================
+# Pineapple in a Can
 
-Pineapple in a can
+Chock full of yummy goodness!
+
+![Pinapple in a Can](app/assets/img/browser-window-2.png)
