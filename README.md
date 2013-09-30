@@ -34,6 +34,6 @@ $ brunch w -s`
 or
 
 `$ git clone https://github.com/timebox-designs/pineapple-in-a-can.git
-$ npm install
+$ npm install   
 $ brunch w -s`
 
