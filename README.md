@@ -5,7 +5,9 @@
 > Pineapple in a Can is a [Brunch](http://brunch.io/) skeleton chock full of yummy goodness!
 
 ## Getting started
-    $ brunch new https://github.com/timebox-designs/pineapple-in-a-can.git
+Requires [Brunch](http://brunch.io/) 1.7.x
+
+    $ brunch new https://github.com/timebox-designs/pineapple-in-a-can.git [optional-output-dir]
     $ brunch w -s
 
 or
