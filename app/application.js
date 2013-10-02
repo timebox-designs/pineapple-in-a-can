@@ -1,17 +1,19 @@
 var Backbone = require("backbone"),
-    $ = require("jquery");
+    Router = require("router"),
+    Controller = require("controller");
 
-$(function () {
-    var Layout = require("views/application"),
-        app = new Backbone.Marionette.Application();
+var app = new Backbone.Marionette.Application();
 
-    app.addRegions({
-        body: "body"
-    });
-
-    app.addInitializer(function () {
-        this.body.show(new Layout());
-    });
-
-    app.start();
+app.addRegions({
+    body: "body"
 });
+
+app.addInitializer(function () {
+    new Router({controller: new Controller({region: this.body})});
+});
+
+app.on("start", function () {
+    Backbone.history.start();
+});
+
+module.exports = app;
