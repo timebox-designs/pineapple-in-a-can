@@ -35,7 +35,7 @@ or
 * [Underscore](http://documentcloud.github.io/underscore/) v1.5.0
 * [Backbone](http://backbonejs.org/) v1.0.0
 * [Marionette](http://marionettejs.com/) v1.1.0
-* [Bootstrap](http://getbootstrap.com/2.3.2/) v2.3.2
+* [Bootstrap](http://getbootstrap.com/) v3.0.0
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/) v3.2.1
 * [Swag] (http://elving.github.com/swag/) v0.3.1
 

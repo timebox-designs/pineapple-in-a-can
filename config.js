@@ -24,7 +24,7 @@ exports.config = {
             order: {
                 before: [
                     'vendor/styles/bootstrap.css',
-                    'vendor/styles/bootstrap-responsive.css',
+                    'vendor/styles/bootstrap-theme.css',
                     'vendor/styles/font-awesome.css'
                 ]
             }

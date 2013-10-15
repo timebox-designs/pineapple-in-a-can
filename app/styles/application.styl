@@ -7,22 +7,18 @@ $hover-color = #f4f0c3
 $text-shadow = #5f6359
 
 body
-  padding-top: 60px
+  padding-top: 72px
   background-color: #86988b
 
 header
   font-family: $font-family
 
-  .navbar.navbar-fixed-top
-    position: fixed
-
   .navbar
-    .navbar-inner
-      background: #90425c
-      padding: 15px 20px
-      border-bottom: 2px solid #4b4d45
+    background: #90425c
+    padding: 10px 0
+    border-bottom: 2px solid #4b4d45
 
-    .brand
+    .navbar-brand
       color: #fff
       font-size: 22px
       text-transform: uppercase
@@ -32,20 +28,19 @@ header
       color: #fff
       font-size: 12px
 
-    .brand:hover,
+    .navbar-brand:hover,
     .nav > li > a:hover
       color: $hover-color
 
 .masthead
   background: #3a859f url("../img/noise.png") top left repeat
-  padding-top: 40px
   text-align: center
 
   h1
     font-family: $font-family
     font-size: 54px
     color: #fff
-    padding-bottom: 20px
+    padding: 10px 0
     text-shadow: 2px 2px $text-shadow
 
     strong
@@ -55,7 +50,7 @@ header
     color: #245060
     font-weight: 100
     font-size: 28px
-    padding-top: 20px
+    padding: 20px 0 10px
     border-top: 2px solid #42a0ba
     box-shadow: 0 -2px #276475
     width: 60%
@@ -143,6 +138,7 @@ footer
   a
     color: #b7c4be
     font-size: 18px
+    margin-right: 15px
 
   a:hover
     color: #fff
