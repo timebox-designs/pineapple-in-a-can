@@ -12,5 +12,8 @@ require.define({
     },
     "handlebars": function (require, exports, module) {
         return module.exports = Handlebars;
+    },
+    "swag": function (require, exports, module) {
+        return module.exports = Swag;
     }
 });
