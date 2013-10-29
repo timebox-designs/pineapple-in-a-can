@@ -3,43 +3,52 @@
 @import 'nib'
 
 $font-family = Slackey
+$header-background-color = #90425c
+$masthead-background-color = #3a859f
+$background-color = #86988b
+
+$body-color = #fff
+$text-color = #000
 $hover-color = #f4f0c3
 $text-shadow = #5f6359
+$box-shadow = #4b4d45
 
 body
   padding-top: 72px
-  background-color: #86988b
+  color: $body-color
+  background-color: $background-color
 
 header
   font-family: $font-family
 
   .navbar
-    background: #90425c
+    background: $header-background-color
     padding: 10px 0
-    border-bottom: 2px solid #4b4d45
+    border-bottom: 2px solid $box-shadow
+
+    .navbar-brand,
+    .navbar-nav > li > a
+      color: $body-color
+
+    .navbar-brand:hover,
+    .navbar-nav > li > a:hover
+      color: $hover-color
 
     .navbar-brand
-      color: #fff
       font-size: 22px
       text-transform: uppercase
       text-shadow: 2px 2px $text-shadow
 
     .nav > li > a
-      color: #fff
       font-size: 12px
 
-    .navbar-brand:hover,
-    .nav > li > a:hover
-      color: $hover-color
-
 .masthead
-  background: #3a859f url("../img/noise.png") top left repeat
+  background: $masthead-background-color url("../img/noise.png") top left repeat
   text-align: center
 
   h1
     font-family: $font-family
     font-size: 54px
-    color: #fff
     padding: 10px 0
     text-shadow: 2px 2px $text-shadow
 
@@ -108,10 +117,9 @@ header
   z-index: 2
   padding: 30px 0
   background: url("../img/stripped-bg.png")
-  box-shadow: 0px -10px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px #4b4d45
+  box-shadow: 0px -10px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px $box-shadow
 
   .info-bullet
-    color: #fff
     text-align: center
     margin-bottom: 10px
 
@@ -130,6 +138,9 @@ header
       padding-bottom: 10px
       font-family: $font-family
 
+  p
+    color: $text-color
+
 footer
   padding-top: 30px
   font-family: $font-family
@@ -141,5 +152,5 @@ footer
     margin-right: 15px
 
   a:hover
-    color: #fff
+    color: $body-color
     text-decoration: none
