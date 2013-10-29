@@ -1,5 +1,7 @@
 var Backbone = require("backbone");
 
-module.exports = Backbone.Marionette.Layout.extend({
+var Layout = Backbone.Marionette.Layout.extend({
     template: require("./template")
 });
+
+module.exports = Layout;

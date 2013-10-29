@@ -2,9 +2,10 @@
 
 ![Pinapple in a Can](app/assets/img/browser-window-2.png)
 
-> Pineapple in a Can is a [Brunch](http://brunch.io/) skeleton chock full of yummy goodness!
+> Furnished!
 
 ## Features
+A simple [Brunch](http://brunch.io/) skeleton chock full of yummy goodness!
 
 ### Languages
 * [JavaScript](http://www.codecademy.com/tracks/javascript)
@@ -32,13 +33,13 @@
 ## Getting started
 Requires [Brunch](http://brunch.io/) 1.7.x
 
-    $ brunch new https://github.com/timebox-designs/pineapple-in-a-can.git [optional-output-dir]
+    $ brunch new git://github.com/timebox-designs/pineapple-in-a-can.git [optional-output-dir]
     $ cd [optional-output-dir]
     $ brunch w -s
 
 or
 
-    $ git clone https://github.com/timebox-designs/pineapple-in-a-can.git
+    $ git clone git://github.com/timebox-designs/pineapple-in-a-can.git
     $ npm install
     $ brunch w -s
 
