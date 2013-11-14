@@ -1,6 +1,6 @@
 // MarionetteJS (Backbone.Marionette)
 // ----------------------------------
-// v1.1.0
+// v1.2.3
 //
 // Copyright (c)2013 Derick Bailey, Muted Solutions, LLC.
 // Distributed under MIT license
@@ -1202,10 +1202,16 @@ Marionette.Renderer = {
 // The core view type that other Marionette views extend from.
 Marionette.View = Backbone.View.extend({
 
-  constructor: function(){
+  constructor: function(options){
     _.bindAll(this, "render");
 
     var args = Array.prototype.slice.apply(arguments);
+
+    // this exposes view options to the view initializer
+    // this is a backfill since backbone removed the assignment
+    // of this.options
+    // at some point however this may be removed
+    this.options = options || {};
     Backbone.View.prototype.constructor.apply(this, args);
 
     Marionette.MonitorDOMRefresh(this);
@@ -1213,7 +1219,7 @@ Marionette.View = Backbone.View.extend({
   },
 
   // import the "triggerMethod" to trigger events with corresponding
-  // methods if the method exists 
+  // methods if the method exists
   triggerMethod: Marionette.triggerMethod,
 
   // Get the template for this view
@@ -1252,12 +1258,23 @@ Marionette.View = Backbone.View.extend({
     // action and stop propagation of DOM events
     _.each(triggers, function(value, key){
 
+      var hasOptions = _.isObject(value);
+      var eventName = hasOptions ? value.event : value;
+
       // build the event handler function for the DOM event
       triggerEvents[key] = function(e){
 
         // stop the event in its tracks
-        if (e && e.preventDefault){ e.preventDefault(); }
-        if (e && e.stopPropagation){ e.stopPropagation(); }
+        if (e) {
+          var prevent = e.preventDefault;
+          var stop = e.stopPropagation;
+
+          var shouldPrevent = hasOptions ? value.preventDefault : prevent;
+          var shouldStop = hasOptions ? value.stopPropagation : stop;
+
+          if (shouldPrevent && prevent) { prevent.apply(e); }
+          if (shouldStop && stop) { stop.apply(e); }
+        }
 
         // build the args for the event
         var args = {
@@ -1267,7 +1284,7 @@ Marionette.View = Backbone.View.extend({
         };
 
         // trigger the event
-        this.triggerMethod(value, args);
+        this.triggerMethod(eventName, args);
       };
 
     }, this);
@@ -1275,7 +1292,7 @@ Marionette.View = Backbone.View.extend({
     return triggerEvents;
   },
 
-  // Overriding Backbone.View's delegateEvents to handle 
+  // Overriding Backbone.View's delegateEvents to handle
   // the `triggers`, `modelEvents`, and `collectionEvents` configuration
   delegateEvents: function(events){
     this._delegateDOMEvents(events);
@@ -1545,7 +1562,7 @@ Marionette.CollectionView = Marionette.View.extend({
   // a collection of item views, when the collection is
   // empty
   showEmptyView: function(){
-    var EmptyView = Marionette.getOption(this, "emptyView");
+    var EmptyView = this.getEmptyView();
 
     if (EmptyView && !this._showingEmptyView){
       this._showingEmptyView = true;
@@ -1562,6 +1579,11 @@ Marionette.CollectionView = Marionette.View.extend({
       this.closeChildren();
       delete this._showingEmptyView;
     }
+  },
+
+  // Retrieve the empty view type
+  getEmptyView: function(){
+    return Marionette.getOption(this, "emptyView");
   },
 
   // Retrieve the itemView type, either from `this.options.itemView`
@@ -1728,11 +1750,17 @@ Marionette.CompositeView = Marionette.CollectionView.extend({
   // binds to. Override this method to prevent the initial
   // events, or to add your own initial events.
   _initialEvents: function(){
-    if (this.collection){
-      this.listenTo(this.collection, "add", this.addChildView, this);
-      this.listenTo(this.collection, "remove", this.removeItemView, this);
-      this.listenTo(this.collection, "reset", this._renderChildren, this);
-    }
+
+    // Bind only after composite view in rendered to avoid adding child views
+    // to unexisting itemViewContainer
+    this.once('render', function () {
+      if (this.collection){
+        this.listenTo(this.collection, "add", this.addChildView, this);
+        this.listenTo(this.collection, "remove", this.removeItemView, this);
+        this.listenTo(this.collection, "reset", this._renderChildren, this);
+      }
+    });
+
   },
 
   // Retrieve the `itemView` to be used when rendering each of

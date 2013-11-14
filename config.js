@@ -1,4 +1,7 @@
 exports.config = {
+    paths: {
+        app: 'app'
+    },
     files: {
         javascripts: {
             defaultExtension: "js",
