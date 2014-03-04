@@ -13,13 +13,13 @@ A simple [Brunch](http://brunch.io/) skeleton chock full of yummy goodness!
 
 ### Frameworks
 * [Backbone](http://backbonejs.org/) v1.1.x
-* [Bootstrap](http://getbootstrap.com/) v3.0.x
+* [Bootstrap](http://getbootstrap.com/) v3.1.x
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/) v4.0.x
 * [Handlebars](http://handlebarsjs.com/) v1.0.x
-* [jQuery](http://jquery.com/) v1.10.x
-* [Marionette](http://marionettejs.com/) v1.3.x
+* [jQuery](http://jquery.com/) v1.11.x
+* [Marionette](http://marionettejs.com/) v1.6.x
 * [Swag](http://elving.github.com/swag/) v0.5.x
-* [Underscore](http://documentcloud.github.io/underscore/) v1.5.x
+* [Underscore](http://documentcloud.github.io/underscore/) v1.6.x
 
 ### Plugins
 * [JavaScript-brunch](https://github.com/brunch/javascript-brunch)
