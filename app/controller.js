@@ -1,3 +1,6 @@
+/* jshint node: true */
+"use strict";
+
 var Backbone = require("backbone"),
     Layout = require("views/default");
 
