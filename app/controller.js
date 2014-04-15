@@ -2,7 +2,7 @@
 "use strict";
 
 var Backbone = require("backbone"),
-    Layout = require("views/default");
+    Layout = require("views/application");
 
 module.exports = Backbone.Marionette.Controller.extend({
     initialize: function (options) {
