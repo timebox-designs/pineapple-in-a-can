@@ -17,7 +17,7 @@ A simple [Brunch](http://brunch.io/) skeleton chock full of yummy goodness!
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/) v4.0.x
 * [Handlebars](http://handlebarsjs.com/) v1.0.x
 * [jQuery](http://jquery.com/) v1.11.x
-* [Marionette](http://marionettejs.com/) v1.6.x
+* [Marionette](http://marionettejs.com/) v1.8.x
 * [Swag](http://elving.github.com/swag/) v0.5.x
 * [Underscore](http://documentcloud.github.io/underscore/) v1.6.x
 
