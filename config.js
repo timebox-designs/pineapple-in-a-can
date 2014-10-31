@@ -7,17 +7,16 @@ exports.config = {
             defaultExtension: "js",
             joinTo: {
                 "javascripts/app.js": /^app/,
-                "javascripts/vendor.js": /^vendor/
+                "javascripts/vendor.js": /^vendor|^bower_components/
             },
             order: {
                 before: [
-                    'vendor/scripts/console-helper.js',
-                    'vendor/scripts/jquery.js',
-                    'vendor/scripts/underscore.js',
-                    'vendor/scripts/backbone.js',
-                    'vendor/scripts/backbone.marionette.js',
-                    'vendor/scripts/bootstrap.js',
-                    'vendor/scripts/swag.js'
+                    'bower_components/jquery/dist/jquery.js',
+                    'bower_components/underscore/underscore.js',
+                    'bower_components/backbone/backbone.js',
+                    "bower_components/marionette/lib/backbone.marionette.js",
+                    "bower_components/bootstrap/dist/js/bootstrap.js",
+                    "bower_components/swag/lib/swag.js"
                 ]
             }
         },
@@ -26,9 +25,9 @@ exports.config = {
             joinTo: "stylesheets/app.css",
             order: {
                 before: [
-                    'vendor/styles/bootstrap.css',
-                    'vendor/styles/bootstrap-theme.css',
-                    'vendor/styles/font-awesome.css'
+                    'bower_components/bootstrap/dist/css/bootstrap.css',
+                    'bower_components/bootstrap/dist/css/bootstrap-theme.css',
+                    'bower_components/font-awesome/css/font-awesome.css'
                 ]
             }
         },
