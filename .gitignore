@@ -1,4 +1,6 @@
+/node_modules
+/bower_components
+/public
+
 .DS_Store
 /.idea
-/node_modules
-/public

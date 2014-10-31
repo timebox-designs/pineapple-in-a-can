@@ -2,8 +2,6 @@
 "use strict";
 
 var Backbone = require("backbone"),
-    Router = require("router"),
-    Controller = require("controller"),
     Swag = require("swag");
 
 var app = new Backbone.Marionette.Application();
@@ -17,6 +15,9 @@ app.addInitializer(function () {
 });
 
 app.addInitializer(function () {
+    var Router = require("router");
+    var Controller = require("controller");
+
     new Router({controller: new Controller({region: this.body})});
 });
 

@@ -3,7 +3,7 @@
 
 var Backbone = require("backbone");
 
-var Layout = Backbone.Marionette.Layout.extend({
+var Layout = Backbone.Marionette.LayoutView.extend({
     template: require("./template")
 });
 
