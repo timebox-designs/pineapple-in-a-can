@@ -1,3 +1,6 @@
+var include = /^vendor|^bower_components/;
+var exclude = /^bower_components\/handlebars/;  // loaded by the handlebars-brunch plugin
+
 exports.config = {
     paths: {
         app: 'app'
@@ -7,7 +10,9 @@ exports.config = {
             defaultExtension: "js",
             joinTo: {
                 "javascripts/app.js": /^app/,
-                "javascripts/vendor.js": /^vendor|^bower_components/
+                "javascripts/vendor.js": function (path) {
+                    return !exclude.test(path) && include.test(path);
+                }
             },
             order: {
                 before: [
