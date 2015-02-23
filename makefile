@@ -5,14 +5,19 @@ clean:
 	rm -rf node_modules
 	rm -rf public
 
-build: clean
+install:
 	npm install
 	./node_modules/.bin/bower install --config.interactive=false
+
+copy-fonts:
+	rm -vf app/assets/fonts/*
+	cp -vf bower_components/bootstrap/fonts/* app/assets/fonts
+	cp -vf bower_components/font-awesome/fonts/* app/assets/fonts
+
+build: clean install copy-fonts
 	./node_modules/brunch/bin/brunch build
 
-production: clean
-	npm install
-	./node_modules/.bin/bower install --config.interactive=false
+production: clean install copy-fonts
 	./node_modules/brunch/bin/brunch build --production
 
 build-test: build test

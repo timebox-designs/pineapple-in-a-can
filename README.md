@@ -14,10 +14,10 @@ A simple [Brunch](http://brunch.io/) skeleton chock full of yummy goodness!
 ### Frameworks
 * [Backbone](http://backbonejs.org/) v1.1.x
 * [Bootstrap](http://getbootstrap.com/) v3.3.x
-* [Font Awesome](http://fortawesome.github.io/Font-Awesome/) v4.2.x
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/) v4.3.x
 * [Handlebars](http://handlebarsjs.com/) v1.3.x
 * [jQuery](http://jquery.com/) v2.1.x
-* [Marionette](http://marionettejs.com/) v2.2.x
+* [Marionette](http://marionettejs.com/) v2.3.x
 * [Swag](http://elving.github.com/swag/) v0.7.x
 * [Underscore](http://documentcloud.github.io/underscore/) v1.6.x
 
@@ -31,17 +31,10 @@ A simple [Brunch](http://brunch.io/) skeleton chock full of yummy goodness!
 * [JSHint-brunch](https://github.com/brunch/jshint-brunch)
 
 ## Getting started
-Requires [Brunch](http://brunch.io/) 1.7.x
-
-    $ brunch new git://github.com/timebox-designs/pineapple-in-a-can.git [optional-output-dir]
-    $ cd [optional-output-dir]
-    $ brunch w -s
-
-or
-
-    $ git clone git://github.com/timebox-designs/pineapple-in-a-can.git
-    $ npm install
-    $ brunch w -s
+	$ git clone git://github.com/timebox-designs/pineapple-in-a-can.git [optional-output-dir]
+	$ cd [optional-output-dir]
+	$ make
+	$ npm start
 
 ## License
 The MIT License (MIT)
