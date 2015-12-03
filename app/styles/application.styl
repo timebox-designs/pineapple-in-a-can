@@ -1,0 +1,156 @@
+// nib is a powerful lib for stylus that provides cross-browser css3 mixins.
+// No more vendor prefixes. http://visionmedia.github.com/nib/
+@import 'nib'
+
+$font-family = Slackey
+$header-background-color = #90425c
+$masthead-background-color = #3a859f
+$background-color = #86988b
+
+$body-color = #fff
+$text-color = #000
+$hover-color = #f4f0c3
+$text-shadow = #5f6359
+$box-shadow = #4b4d45
+
+body
+  padding-top: 72px
+  color: $body-color
+  background-color: $background-color
+
+header
+  font-family: $font-family
+
+  .navbar
+    background: $header-background-color
+    padding: 10px 0
+    border-bottom: 2px solid $box-shadow
+
+    .navbar-brand,
+    .navbar-nav > li > a
+      color: $body-color
+
+    .navbar-brand:hover,
+    .navbar-nav > li > a:hover
+      color: $hover-color
+
+    .navbar-brand
+      font-size: 22px
+      text-transform: uppercase
+      text-shadow: 2px 2px $text-shadow
+
+    .nav > li > a
+      font-size: 12px
+
+.masthead
+  background: $masthead-background-color url("../img/noise.png") top left repeat
+  text-align: center
+
+  h1
+    font-family: $font-family
+    font-size: 54px
+    padding: 10px 0
+    text-shadow: 2px 2px $text-shadow
+
+    strong
+      color: $hover-color
+
+  h2
+    color: #245060
+    font-weight: 100
+    font-size: 28px
+    padding: 20px 0 10px
+    border-top: 2px solid #42a0ba
+    box-shadow: 0 -2px #276475
+    width: 60%
+    margin: 10px auto
+
+    a
+      color: inherit
+      text-decoration: none
+
+    a:hover
+      color: $hover-color
+
+  .windows
+    position: relative
+    padding-top: 20px
+    height: 320px
+    overflow: hidden
+    z-index: 1
+
+    [class^="image-"]
+      position: absolute
+      transition: all 400ms ease
+
+    [class^="image-"]:hover
+      bottom: 2%
+
+    .image-left
+      width: 30%
+      bottom: -8%
+      left: 5%
+
+    .image-left:hover
+      left: 0
+
+    .image-center
+      width: 40%
+      bottom: -9%
+      left: 50%
+      margin-left: -20%
+
+    .image-right
+      width: 30%
+      right: 5%
+      bottom: -6%
+
+.masthead:after
+  position: absolute
+  content: url(../img/flower.png)
+  top: -50px
+  right: 10px
+  opacity: 0.5
+
+.features
+  position: relative
+  z-index: 2
+  padding: 30px 0
+  background: url("../img/stripped-bg.png")
+  box-shadow: 0px -10px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px $box-shadow
+
+  .info-bullet
+    text-align: center
+    margin-bottom: 10px
+
+    i
+      font-size: 90px
+      display: block
+      line-height: 102px
+      text-shadow: 1px 1px $text-shadow
+
+    h5
+      color: #3a859f
+      font-size: 22px
+      text-transform: uppercase
+      text-shadow: 1px 1px $text-shadow
+      margin-bottom: 5px
+      padding-bottom: 10px
+      font-family: $font-family
+
+  p
+    color: $text-color
+
+footer
+  padding-top: 30px
+  font-family: $font-family
+  height: 200px
+
+  a
+    color: #b7c4be
+    font-size: 18px
+    margin-right: 15px
+
+  a:hover
+    color: $body-color
+    text-decoration: none
