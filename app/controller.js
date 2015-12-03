@@ -4,7 +4,7 @@
 var Backbone = require("backbone"),
     Layout = require("views/application");
 
-module.exports = Backbone.Marionette.Controller.extend({
+module.exports = Backbone.Marionette.Object.extend({
     initialize: function (options) {
         this.region = options.region;
     },
